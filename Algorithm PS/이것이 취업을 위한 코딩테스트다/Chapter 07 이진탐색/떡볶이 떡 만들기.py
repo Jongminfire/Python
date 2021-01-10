@@ -21,4 +21,4 @@ lst = list(map(int,input().split()))
 
 lst.sort()
 
-print(binary_search(lst,m,lst[0],lst[n-1]))
+print(binary_search(lst,m,0,lst[n-1]))
