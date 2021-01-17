@@ -1,5 +1,5 @@
 def cal(x,y):
-  return int((y*100/x))
+  return int((y*100/x))         # int((y/x)*100) 으로 하면 오답처리 돼서 수정함
 
 x,y = map(int,input().split())
 pov = cal(x,y)
