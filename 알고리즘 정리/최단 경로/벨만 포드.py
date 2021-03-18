@@ -12,12 +12,12 @@ def bf(start):
             cost = edges[j][2]
 
         # 현재 간선을 거쳐서 다른 노드로 이동하는 거리가 더 짧은 경우
-        if dist[cur] != INF and dist[next_node] > dist[cur] + cost:
-            dist[next_node] = dist[cur] + cost
-
-            # n번째 반복에서도 값이 갱신된다면 음수 순환이 존재
-            if i == n-1 :
-                return True
+            if dist[cur] != INF and dist[next_node] > dist[cur] + cost:
+                dist[next_node] = dist[cur] + cost
+                
+                # n번째 반복에서도 값이 갱신된다면 음수 순환이 존재
+                if i == n-1 :
+                    return True
     
     return False
 
