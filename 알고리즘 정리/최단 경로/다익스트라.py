@@ -11,7 +11,7 @@ distance = [INF] * (n+1)                        # 최단 거리 테이블을 모
 # 모든 간선 정보를 입력받기
 for _ in range(m):
     a,b,c = map(int,input().split())            # a번 노드에서 b번 노드로 가는 비용이 c라는 의미
-    graph[a].appned((b,c))
+    graph[a].append((b,c))
 
 def dijkstra(start):
     q = []
