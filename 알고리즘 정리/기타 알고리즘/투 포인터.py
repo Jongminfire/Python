@@ -38,10 +38,10 @@ print(count)
 
 n, m = map(int, input().split())
 a = list(map(int, input().split()))
-b = list(map(int, input().spliit()))
+b = list(map(int, input().split()))
 
 result = [0]*(len(a)+len(b))
-i, j, k = 0
+i, j, k = 0, 0, 0
 
 while i < n and j < m:
     # B가 전부 처리되었거나 A의 원소가 더 작을 때
