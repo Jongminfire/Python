@@ -32,6 +32,33 @@ print(count)
 
 
 """
+n개의 리스트 중 부분합이 m이상인 개수 세기
+(https://www.acmicpc.net/problem/1806)
+"""
+
+n, s = map(int, input().split())
+lst = list(map(int, input().split()))
+
+INF = int(1e9)
+start = 0
+end = 0
+ans = INF
+total = 0
+
+while end < len(lst):
+    if total < s:
+        total += lst[end]
+        end += 1
+
+    while total >= s:
+        ans = min(ans, end-start)
+        total -= lst[start]
+        start += 1
+
+print(ans if ans != INF else 0)
+
+
+"""
 이미 정렬된 두 리스트가 주어질 때 두 리스트의 모든 원소를 합쳐서 정렬한 결과를 반환
 """
 
