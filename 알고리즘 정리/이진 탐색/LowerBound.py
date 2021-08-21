@@ -24,4 +24,14 @@ def lowerBound(lst, target):
 
     return end
 
+# 혹은 from bisect import bisect_left 로 lower_bound를 구할 수 있음
+
+from bisect import bisect_left
+
+lst = [1,5,7,10,27,2,16,30]
+target = int(input())
+lst.sort()
+
+idx = bisect_left(lst,target)
+
 # lst에서 target보다 크거나 같은 요소의 최소 인덱스 구하기
