@@ -8,3 +8,10 @@ def rotate_matrix(lst):
             temp[c][row_length - 1 - r] = lst[r][c]
 
     return temp
+
+
+# 혹은 아래 방법으로도 가능하다
+
+def rotated(arr):
+    list_of_tuples = zip(*arr[::-1])
+    return [list(elem) for elem in list_of_tuples]
